@@ -85,7 +85,7 @@ Utilizadas para armazenar e recuperar eficientemente dados de `Conteudo` e `Usua
 - Soma do tempo de consumo em todas as interações.
 
 ### 3. **Plataformas com Maior Engajamento**
-- Interações do tipo `like`, `share`, `comment` agrupadas por plataforma.
+- Interações do tipo `view_start`, `like`, `share`, `comment` agrupadas por plataforma.
 
 ### 4. **Conteúdos Mais Comentados**
 - Ranking de conteúdos com maior número de interações do tipo `comment`.
