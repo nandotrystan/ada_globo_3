@@ -1,28 +1,22 @@
-# 2.2. Gerenciamento de Conteúdos e Usuários (Árvore de Busca Binária)
-# Para gerenciar os objetos Conteudo e Usuario, utilize Árvores de Busca Binária (Binary Search Trees - BSTs). Isso permitirá uma busca, inserção e remoção mais eficiente em comparação com listas lineares, especialmente à medida que o número de conteúdos e usuários cresce.
-
-# 2.2.1. Árvore de Conteúdos
-# Chave da BST: _id_conteudo (inteiro)
-
-# Operações:
-
-# inserir_conteudo(conteudo): Adiciona um objeto Conteudo à árvore, utilizando o _id_conteudo como chave.
-# buscar_conteudo(id_conteudo): Retorna o objeto Conteudo correspondente ao id_conteudo fornecido, ou None se não encontrado.
-# remover_conteudo(id_conteudo): Remove o conteúdo da árvore.
-# percurso_em_ordem(): Retorna uma lista de todos os conteúdos na árvore em ordem crescente de _id_conteudo.
-# 2.2.2. Árvore de Usuários
-# Chave da BST: _id_usuario (inteiro)
-
-# Operações:
-
-# inserir_usuario(usuario): Adiciona um objeto Usuario à árvore, utilizando o _id_usuario como chave.
-# buscar_usuario(id_usuario): Retorna o objeto Usuario correspondente ao id_usuario fornecido, ou None se não encontrado.
-# remover_usuario(id_usuario): Remove o usuário da árvore.
-# percurso_em_ordem(): Retorna uma lista de todos os usuários na árvore em ordem crescente de _id_usuario.
-
 from entidades.conteudo import Conteudo
 
 class Node:
+    """
+    Classe que representa um nó em uma árvore binária de busca (BST).
+    Cada nó contém uma chave, um objeto (instância de Conteudo), e referências para os nós filhos esquerdo e direito.
+    A chave é usada para organizar os nós na árvore, permitindo operações de inserção, busca
+    e remoção de forma eficiente.
+    A classe também implementa métodos para representar o nó como string e para exibir suas informações.
+    A classe BST (Binary Search Tree) é usada para gerenciar a árvore, permitindo inserir
+    e buscar nós com base em suas chaves.
+    A classe BST também permite percorrer a árvore em ordem, retornando uma lista de objetos
+    associados aos nós na ordem correta.
+    A classe Node é essencial para a construção de uma árvore binária de busca, onde cada nó
+    pode ter até dois filhos, e a organização dos nós permite operações eficientes de busca e manipulação.
+    A classe BST é responsável por gerenciar a estrutura da árvore, permitindo a inserção,
+    busca e remoção de nós, além de percorrer a árvore em ordem.
+    A classe Node é usada internamente pela classe BST para representar cada nó da árvore.
+    """
     def __init__(self, chave, objeto):
         self.chave = chave
         self.objeto = objeto

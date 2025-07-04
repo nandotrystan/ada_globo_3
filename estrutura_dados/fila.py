@@ -1,4 +1,12 @@
 class Fila:
+    """
+    Implementação de uma fila simples usando lista.
+    A fila é uma estrutura de dados do tipo FIFO (First In, First Out),
+    onde os elementos são adicionados no final e removidos do início.
+    Esta classe permite enfileirar (adicionar) e desenfileirar (remover) itens,
+    além de verificar se a fila está vazia e obter o tamanho da fila.
+
+    """
     def __init__(self):
         self.itens = []
 
@@ -23,6 +31,14 @@ class Fila:
 from collections import deque
 
 class FilaCSV:
+    """
+    Implementação de uma fila para manipulação de linhas CSV.
+    Esta classe utiliza a deque do módulo collections para
+    permitir operações eficientes de enfileiramento e desenfileiramento.
+    A fila é usada para armazenar linhas de um arquivo CSV, permitindo
+    que as linhas sejam processadas na ordem em que foram lidas.
+    
+    """
     def __init__(self):
         self.fila = deque()
 

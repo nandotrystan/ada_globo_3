@@ -1,4 +1,18 @@
 class NodeAVL:
+    """
+    Classe que representa um nó em uma árvore AVL.
+    Cada nó contém uma chave, um objeto (instância de Conteudo), e referências para os nós filhos esquerdo e direito.
+    A chave é usada para organizar os nós na árvore, permitindo operações de inserção, busca
+    e remoção de forma eficiente.
+    A classe também implementa métodos para calcular a altura do nó e o fator de balanceamento
+    (diferença entre as alturas dos subárvores esquerda e direita).
+    A classe NodeAVL é essencial para a construção de uma árvore AVL, onde cada nó pode ter até dois filhos,
+    e a organização dos nós permite operações eficientes de busca e manipulação, mantendo a árvore balanceada.
+    A classe AVLTree é responsável por gerenciar a estrutura da árvore AVL, permitindo a inserção,
+    busca e remoção de nós, além de percorrer a árvore em ordem.
+    A classe NodeAVL é usada internamente pela classe AVLTree para representar cada nó da árvore.   
+
+    """
     def __init__(self, chave, objeto):
         self.chave = chave
         self.objeto = objeto
@@ -7,6 +21,22 @@ class NodeAVL:
         self.altura = 1
 
 class AVLTree:
+    """
+    Classe que representa uma árvore AVL (Adelson-Velsky e Landis).
+    A árvore AVL é uma árvore binária de busca balanceada, onde a diferença de alturas entre as subárvores esquerda e direita de qualquer nó é no máximo 1.
+    A classe permite inserir nós, buscar por chaves, e percorrer a árvore em ordem.
+    Cada nó é representado pela classe NodeAVL, que contém uma chave, um objeto (instância de Conteudo), e referências para os nós filhos esquerdo e direito.
+    A classe AVLTree implementa as operações de inserção com balanceamento automático, garantindo que a árvore permaneça balanceada após cada inserção.
+    A classe também implementa métodos para calcular a altura do nó e o fator de balanceamento
+    (diferença entre as alturas dos subárvores esquerda e direita).
+    A classe AVLTree é essencial para a construção de uma árvore AVL, onde cada nó pode ter até dois filhos,
+    e a organização dos nós permite operações eficientes de busca e manipulação, mantendo a árvore balanceada.
+    A classe NodeAVL é usada internamente pela classe AVLTree para representar cada nó da árvore.
+    A classe AVLTree é responsável por gerenciar a estrutura da árvore AVL, permitindo a inserção,
+    busca e remoção de nós, além de percorrer a árvore em ordem.
+    
+
+    """
     def __init__(self):
         self.raiz = None
 
