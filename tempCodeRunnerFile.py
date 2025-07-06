@@ -1,1 +1,10 @@
-view_start
+print("1. Gerar relatório de engajamento dos conteúdos")
+        print("2. Gerar relatório de atividade dos usuários")
+        print("3. Identificar top conteúdos por tempo total de consumo")
+        print("4. Identificar top conteúdos por total de interações de engajamento")
+        print("5. Identificar usuários com maior tempo total de consumo de conteúdo")
+        print("6. Identificar plataformas com maior engajamento")
+        print("7. Identificar conteúdos mais comentados")
+        print("8. Identificar total de interações por tipo de conteúdo")
+        print("9. Identificar tempo médio de consumo por plataforma")
+        print("10. Identificar quantidade de comentários por conteúdo")

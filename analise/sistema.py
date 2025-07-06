@@ -145,6 +145,9 @@ class SistemaAnaliseEngajamento:
                 print(f"[ERRO] Linha inválida: {linha} - Motivo: {e}")
         print(f"\nTotal de conteúdos: {len(self._arvore_conteudos.percurso_em_ordem())}")
         print(f"Total de usuários: {len(self._arvore_usuarios.percurso_em_ordem())}")
+        
+        
+        
 
     def gerar_relatorio_engajamento_conteudos(self, top_n: int = None):
         """
@@ -561,6 +564,10 @@ class SistemaAnaliseEngajamento:
         print(f"\nTop {top_n} conteúdos por quantidade de comentários:")
         for i, (nome, total) in enumerate(conteudos_ordenados[:top_n], 1):
             print(f"{i}. {nome} - {total} comentários")
+            # imprimir os comentários de cada conteúdo
+        for conteudo in self._arvore_conteudos.percurso_em_ordem():
+            print(f"Conteúdo: {conteudo.nome_conteudo} (ID: {conteudo.id_conteudo})")
+            
 
             
         return conteudos_ordenados[:top_n] if top_n else conteudos_ordenados
