@@ -19,7 +19,7 @@ def main():
     sistema.processar_interacoes_da_fila()
 
     def menu():
-        print("Menu:")
+        print("\n\nMenu:")
         print("1. Gerar relatório de engajamento dos conteúdos")
         print("2. Gerar relatório de atividade dos usuários")
         print("3. Identificar top conteúdos por tempo total de consumo")
@@ -30,8 +30,9 @@ def main():
         print("8. Identificar total de interações por tipo de conteúdo")
         print("9. Identificar tempo médio de consumo por plataforma")
         print("10. Identificar quantidade de comentários por conteúdo")
-        print("0. Sair")
+        print("0. Sair\n")
     while True:
+        print("\nBem-vindo ao Sistema de Análise de Engajamento!")
         menu()
         opcao = input("Escolha uma opção: ")
         if opcao == '1':
