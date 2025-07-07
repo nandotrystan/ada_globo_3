@@ -123,3 +123,23 @@ class AVLTree:
         z.altura = 1 + max(self._altura(z.esquerda), self._altura(z.direita))
         y.altura = 1 + max(self._altura(y.esquerda), self._altura(y.direita))
         return y
+    
+    def _imprimir_arvore(self, no, nivel=0, prefixo="Raiz: "):
+        if no is not None:
+            print("    " * nivel + prefixo + f"[{no.chave}]")
+            if no.esquerda or no.direita:
+                if no.esquerda:
+                    self._imprimir_arvore(no.esquerda, nivel + 1, "E └─ ")
+                else:
+                    print("    " * (nivel + 1) + "E └─ [None]")
+                if no.direita:
+                    self._imprimir_arvore(no.direita, nivel + 1, "D └─ ")
+                else:
+                    print("    " * (nivel + 1) + "D └─ [None]")
+
+    def imprimir_arvore(self):
+        """
+        Método para imprimir a árvore AVL de forma estruturada.
+        Exibe a raiz, os nós filhos esquerdo e direito, e seus respectivos subárvores.
+        """
+        self._imprimir_arvore(self.raiz)
