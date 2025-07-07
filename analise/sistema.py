@@ -550,6 +550,7 @@ class SistemaAnaliseEngajamento:
         """
             
         conteudos = self._arvore_conteudos.percurso_em_ordem()
+        self._arvore_conteudos.imprimir_arvore()
         
         comentarios_por_conteudo = defaultdict(int)
 
@@ -565,8 +566,8 @@ class SistemaAnaliseEngajamento:
         for i, (nome, total) in enumerate(conteudos_ordenados[:top_n], 1):
             print(f"{i}. {nome} - {total} comentários")
             # imprimir os comentários de cada conteúdo
-        for conteudo in self._arvore_conteudos.percurso_em_ordem():
-            print(f"Conteúdo: {conteudo.nome_conteudo} (ID: {conteudo.id_conteudo})")
+        # for conteudo in self._arvore_conteudos.percurso_em_ordem():
+        #     print(f"Conteúdo: {conteudo.nome_conteudo} (ID: {conteudo.id_conteudo})")
             
 
             
